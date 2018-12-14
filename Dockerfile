@@ -27,3 +27,10 @@ RUN mkdir -p /var/lib/apt/lists \
     && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
 RUN gem install bundler
+
+RUN set -ex \
+    && apt-get update  \
+    && apt-get install -y \
+                    mysql-client \
+                    --no-install-recommends  \
+    && rm -rf /var/lib/apt/lists/*

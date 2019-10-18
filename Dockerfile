@@ -37,6 +37,7 @@ RUN gem install bundler -v 1.17.3
 RUN set -ex \
     && apt-get update  \
     && apt-get install -y \
+                    libtag1-dev \
                     mysql-client \
                     --no-install-recommends  \
     && rm -rf /var/lib/apt/lists/*

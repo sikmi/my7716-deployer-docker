@@ -34,6 +34,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 
 RUN gem install bundler -v 1.17.3
 
+# dependencies install
 RUN set -ex \
     && apt-get update  \
     && apt-get install -y \
